@@ -22,7 +22,7 @@ copyright = "2020, The contributors"
 author = "The contributors"
 github_user = "coderefinery"
 github_repo_name = ""  # auto-detected from dirname if blank
-github_version = "master"
+github_version = "main"
 conf_py_path = "/content/"  # with leading and trailing slash
 
 # -- General configuration ---------------------------------------------------
