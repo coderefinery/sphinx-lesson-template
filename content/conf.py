@@ -17,13 +17,13 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'LESSON NAME'
-copyright = '2020, The contributors'
-author = 'The contributors'
-github_user = 'coderefinery'
-github_repo_name = ''  # auto-detected from dirname if blank
-github_version = 'master'
-conf_py_path = '/content/' # with leading and trailing slash
+project = "LESSON NAME"
+copyright = "2020, The contributors"
+author = "The contributors"
+github_user = "coderefinery"
+github_repo_name = ""  # auto-detected from dirname if blank
+github_version = "main"
+conf_py_path = "/content/"  # with leading and trailing slash
 
 # -- General configuration ---------------------------------------------------
 
@@ -32,27 +32,33 @@ conf_py_path = '/content/' # with leading and trailing slash
 # ones.
 extensions = [
     # githubpages just adds a .nojekyll file
-    'sphinx.ext.githubpages',
-    'sphinx_lesson',
+    "sphinx.ext.githubpages",
+    "sphinx_lesson",
     # remove once sphinx_rtd_theme updated for contrast and accessibility:
-    'sphinx_rtd_theme_ext_color_contrast',
+    "sphinx_rtd_theme_ext_color_contrast",
 ]
 
 # Settings for myst_nb:
 # https://myst-nb.readthedocs.io/en/latest/use/execute.html#triggering-notebook-execution
-#jupyter_execute_notebooks = "off"
-#jupyter_execute_notebooks = "auto"   # *only* execute if at least one output is missing.
-#jupyter_execute_notebooks = "force"
+# jupyter_execute_notebooks = "off"
+# jupyter_execute_notebooks = "auto"   # *only* execute if at least one output is missing.
+# jupyter_execute_notebooks = "force"
 jupyter_execute_notebooks = "cache"
 
 # Add any paths that contain templates here, relative to this directory.
-#templates_path = ['_templates']
+# templates_path = ['_templates']
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['README*', '_build', 'Thumbs.db', '.DS_Store',
-                    'jupyter_execute', '*venv*']
+exclude_patterns = [
+    "README*",
+    "_build",
+    "Thumbs.db",
+    ".DS_Store",
+    "jupyter_execute",
+    "*venv*",
+]
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -60,31 +66,33 @@ exclude_patterns = ['README*', '_build', 'Thumbs.db', '.DS_Store',
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
+html_theme = "sphinx_rtd_theme"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-#html_static_path = ['_static']
+# html_static_path = ['_static']
 
 
 # HTML context:
-from os.path import dirname, realpath, basename
-html_context = {'display_github': True,
-                'github_user': github_user,
-                # Auto-detect directory name.  This can break, but
-                # useful as a default.
-                'github_repo': github_repo_name or basename(dirname(realpath(__file__))),
-                'github_version': github_version,
-                'conf_py_path': conf_py_path,
-               }
+from os.path import basename, dirname, realpath
+
+html_context = {
+    "display_github": True,
+    "github_user": github_user,
+    # Auto-detect directory name.  This can break, but
+    # useful as a default.
+    "github_repo": github_repo_name or basename(dirname(realpath(__file__))),
+    "github_version": github_version,
+    "conf_py_path": conf_py_path,
+}
 
 # Intersphinx mapping.  For example, with this you can use
 # :py:mod:`multiprocessing` to link straight to the Python docs of that module.
 # List all available references:
 #   python -msphinx.ext.intersphinx https://docs.python.org/3/objects.inv
-#extensions.append('sphinx.ext.intersphinx')
-#intersphinx_mapping = {
+# extensions.append('sphinx.ext.intersphinx')
+# intersphinx_mapping = {
 #    #'python': ('https://docs.python.org/3', None),
 #    #'sphinx': ('https://www.sphinx-doc.org/', None),
 #    #'numpy': ('https://numpy.org/doc/stable/', None),
@@ -92,4 +100,4 @@ html_context = {'display_github': True,
 #    #'pandas': ('https://pandas.pydata.org/docs/', None),
 #    #'matplotlib': ('https://matplotlib.org/', None),
 #    'seaborn': ('https://seaborn.pydata.org/', None),
-#}
+# }
