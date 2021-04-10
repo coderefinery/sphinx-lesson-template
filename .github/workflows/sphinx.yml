@@ -88,7 +88,7 @@ jobs:
       - name: Copy new build (default branch)
         if: |
           contains(github.event_name, 'push') &&
-          contains(github.ref, 'refs/heads/${{ env.DEFAULT_BRANCH }}')
+          contains(github.ref, env.DEFAULT_BRANCH)
         run: |
           set -x
           # Delete everything under _gh-pages/ that is from the
@@ -102,7 +102,7 @@ jobs:
       - name: Copy new build (branch)
         if: |
           contains(github.event_name, 'push') &&
-          !contains(github.ref, 'refs/heads/${{ env.DEFAULT_BRANCH }}')
+          !contains(github.ref, env.DEFAULT_BRANCH)
         run: |
           set -x
           #brname=$(git rev-parse --abbrev-ref HEAD)
