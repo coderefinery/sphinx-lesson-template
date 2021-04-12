@@ -18,9 +18,9 @@
 # -- Project information -----------------------------------------------------
 
 project = "LESSON NAME"
-copyright = "2020, The contributors"
+copyright = "2021, The contributors"
 author = "The contributors"
-github_user = "coderefinery"
+github_user = "ENCCS"
 github_repo_name = ""  # auto-detected from dirname if blank
 github_version = "main"
 conf_py_path = "/content/"  # with leading and trailing slash
@@ -36,6 +36,7 @@ extensions = [
     "sphinx_lesson",
     # remove once sphinx_rtd_theme updated for contrast and accessibility:
     "sphinx_rtd_theme_ext_color_contrast",
+    "sphinx.ext.todo",
 ]
 
 # Settings for myst_nb:
@@ -60,19 +61,20 @@ exclude_patterns = [
     "*venv*",
 ]
 
-
 # -- Options for HTML output -------------------------------------------------
 
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
 html_theme = "sphinx_rtd_theme"
+html_logo = "img/ENCCS.jpg"
+html_favicon = "img/favicon.ico"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-# html_static_path = ['_static']
-
+html_static_path = ['_static']
+html_css_files = ["overrides.css"]
 
 # HTML context:
 from os.path import basename, dirname, realpath
@@ -101,3 +103,26 @@ html_context = {
 #    #'matplotlib': ('https://matplotlib.org/', None),
 #    'seaborn': ('https://seaborn.pydata.org/', None),
 # }
+
+# add few new directives
+from sphinx_lesson.directives import _BaseCRDirective
+
+
+class SignatureDirective(_BaseCRDirective):
+    extra_classes = ["toggle-shown", "dropdown"]
+
+
+class ParametersDirective(_BaseCRDirective):
+    extra_classes = ["dropdown"]
+
+
+class TypealongDirective(_BaseCRDirective):
+    extra_classes = ["toggle-shown", "dropdown"]
+
+
+DIRECTIVES = [SignatureDirective, ParametersDirective, TypealongDirective]
+
+
+def setup(app):
+    for obj in DIRECTIVES:
+        app.add_directive(obj.cssname(), obj)
