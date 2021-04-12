@@ -82,8 +82,8 @@ You are free to:
 The licensor cannot revoke these freedoms as long as you follow these license terms:
 
 - **Attribution** - You must give appropriate credit (mentioning that your work
-  is derived from work that is Copyright (c) {{cookiecutter.full_name}} and individual contributors and, where practical, linking
-  to `<{{cookiecutter.home_page}}>`_), provide a `link to the license
+  is derived from work that is Copyright (c) ENCCS and individual contributors and, where practical, linking
+  to `<https://enccs.github.io/sphinx-lesson-template>`_), provide a `link to the license
   <https://creativecommons.org/licenses/by/4.0/>`_, and indicate if changes were
   made. You may do so in any reasonable manner, but not in any way that suggests
   the licensor endorses you or your use.
