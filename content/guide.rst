@@ -1,5 +1,5 @@
 Instructor's guide
-------------------
+==================
 
 Why we teach this lesson
 ------------------------
