@@ -14,7 +14,8 @@ env:
   # If these SPHINXOPTS are enabled, then be strict about the
   # builds and fail on any warnings.
   #SPHINXOPTS: "-W --keep-going -T"
-  GENERATE_PDF: true   # to enable, must be 'true' lowercase
+  GENERATE_PDF: true          # to enable, must be 'true' lowercase
+  GENERATE_SINGLEHTML: true   # to enable, must be 'true' lowercase
   PDF_FILENAME: lesson.pdf
   MULTIBRANCH: true    # to enable, must be 'true' lowercase
 
@@ -61,6 +62,7 @@ jobs:
           echo "github.head_ref: ${head_ref}"
           echo "github.base_ref: ${base_ref}"
           echo "GENERATE_PDF: ${GENERATE_PDF}"
+          echo "GENERATE_SINGLEHTML: ${GENERATE_SINGLEHTML}"
           set -x
           git rev-parse --abbrev-ref HEAD
           git branch
@@ -85,6 +87,13 @@ jobs:
           #   https://github.com/sphinx-doc/sphinx/pull/8524
           #   https://github.com/readthedocs/sphinx_rtd_theme/pull/1025
           sed -i 's/url_root="#"/url_root=""/' _build/dirhtml/index.html || true
+
+      # singlehtml
+      - name: Generate singlehtml
+        if: ${{ env.GENERATE_SINGLEHTML == 'true' }}
+        run: |
+          make singlehtml
+          mv _build/singlehtml/ _build/dirhtml/singlehtml/
 
       # PDF if requested
       - name: Generate PDF
