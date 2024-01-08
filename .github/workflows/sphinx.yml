@@ -4,6 +4,7 @@
 # License: CC-0.  This is the canonical location of this file, which
 # you may want to link to anyway:
 #   https://github.com/coderefinery/sphinx-lesson-template/blob/main/.github/workflows/sphinx.yml
+#  https://raw.githubusercontent.com/coderefinery/sphinx-lesson-template/main/.github/workflows/sphinx.yml
 
 
 name: sphinx
