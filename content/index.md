@@ -10,7 +10,7 @@ prerequisites
 :delim: ;
 :widths: auto
 
-20 min ; :doc:`filename`
+20 min ; {doc}`filename`
 ```
 
 ```{toctree}
