@@ -18,6 +18,7 @@
 # -- Project information -----------------------------------------------------
 
 project = "LESSON NAME"
+html_title = project
 copyright = "2020, The contributors"
 author = "The contributors"
 github_user = "coderefinery"
