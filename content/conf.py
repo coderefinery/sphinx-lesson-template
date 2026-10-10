@@ -41,15 +41,15 @@ extensions = [
 ]
 
 # Settings for myst_nb:
-# https://myst-nb.readthedocs.io/en/latest/use/execute.html#triggering-notebook-execution
-# jupyter_execute_notebooks = "off"
-# jupyter_execute_notebooks = "auto"   # *only* execute if at least one output is missing.
-# jupyter_execute_notebooks = "force"
+# https://myst-nb.readthedocs.io/en/latest/computation/execute.html#notebook-execution-modes
+#nb_execution_mode = "off"
+#nb_execution_mode = "auto"   # *only* execute if at least one output is missing.
+#nb_execution_mode = "force"
 nb_execution_mode = "cache"
 
 # https://myst-parser.readthedocs.io/en/latest/syntax/optional.html
 myst_enable_extensions = [
-    "colon_fence",
+    "colon_fence",  # ::: can be used instead of ``` for better rendering
 ]
 
 # Settings for sphinx-copybutton
