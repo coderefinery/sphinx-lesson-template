@@ -136,13 +136,13 @@ making it *not* so specific to the current text, so that it doesn't
 have to be updated for every text change (maintainable is better than
 perfect).  Consider using the caption for changeable explanations,
 instead of embedding it in the image.
-.
+
 Include alt text with the basics, but don't duplicate explination from
 the text in the caption (instead say "as explained in text").
-.
+
 You should ONLY include CC-BY 4.0 or public domain images.  Include
 the attribution in the image caption here.
-.
+
 Source: CC-0, machine generated random avatar
 :::
 
