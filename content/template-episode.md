@@ -17,14 +17,13 @@ usually be left off.
 :::
 
 
-
-
 The introduction should be a high level overview of what is on the
-page and why it is interesting.
+page and why it is interesting.  This page demonstrates every element
+you might typically find in a lesson and their typical usage.
 
 
-The lines below (only in the source) will set the default highlighting
-language for the entire page.
+The lines below (only visible in the source file) will set the default
+highlighting language for the entire page.
 
 :::{highlight} python
 :::
@@ -55,6 +54,20 @@ print("hello world")
 print("hello world)
 ```
 
+:::::{tabs}
+::::{group-tab} Python
+This is a group-tab (if you flip it, all tabs on the page flip to
+this)
+
+```python
+print("Hello World!")
+```
+::::
+
+::::{group-tab} R
+::::
+
+:::::
 
 
 ## Exercises: description
@@ -66,6 +79,22 @@ Exercise text here.
 :::{solution}
 Solution text here
 :::
+
+
+The following code-tab has each tab as a code block (there is no space
+for unformatted text).
+
+:::::{tabs}
+```{code-tab} python
+print("Hello World!")
+# Note the tab titles need to be lowercase to max the exact lexer names.
+```
+
+```{code-tab} r
+print("Hello World!")
+```
+
+:::::
 
 
 
@@ -89,5 +118,5 @@ hint of what comes next.
 - ...
 
 This is another holdover from the carpentries style.  This perhaps
-is better done in a "summary" section.
+is better done in the "summary" section.
 :::
