@@ -127,7 +127,6 @@ importance, it could be dropdown, or not.
 ---
 alt: Alt text here
 ---
-
 Detailed caption goes here.  When creating images, you should consider
 how other people coming after you can modify them.  Include a
 modifiable source, and consider what is common enough that other
@@ -135,16 +134,15 @@ people will know how to maintain it in the future.  Also consider
 making it *not* so specific to the current text, so that it doesn't
 have to be updated for every text change (maintainable is better than
 perfect).  Consider using the caption for changeable explanations,
-instead of embedding it in the image.
+instead of embedding it in the image. (Source: machine generated
+random image, CC-0)
+:::
 
-Include alt text with the basics, but don't duplicate explination from
+Include alt text with the basics, but don't duplicate explanation from
 the text in the caption (instead say "as explained in text").
 
 You should ONLY include CC-BY 4.0 or public domain images.  Include
 the attribution in the image caption here.
-
-Source: CC-0, machine generated random avatar
-:::
 
 
 
