@@ -24,21 +24,30 @@ lesson.
 It also assumes knowledge of basic git, file editing, etc.
 :::
 
+*(Remove this descriptive paragraph) The below table provides a rough
+guide for how long episodes are and a rough order of teaching, if
+someone was reading themselves.  Each teaching event does not have to
+follow this exact order or timing, and the table doesn't have to be
+updated to be exact for each course.*
+
 ```{csv-table}
 :delim: ;
 :widths: auto
 
-20 min ; {doc}`filename`
+ 5 min ; {doc}`intro`
+25 min ; {doc}`template-episode`
+10 min ; {doc}`template-optional-episode-inline`
+ 5 min ; {doc}`outro`
 ```
 
 ```{toctree}
 :caption: The lesson
 :maxdepth: 1
 
-template-intro
+intro
 template-episode
 template-optional-episode-inline
-template-outro
+outro
 ```
 
 ```{toctree}
